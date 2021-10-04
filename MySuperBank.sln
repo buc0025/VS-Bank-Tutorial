@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySuperBank", "MySuperBank\MySuperBank.csproj", "{BBC8517B-4002-4550-B2F8-EA881E4AD701}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBC8517B-4002-4550-B2F8-EA881E4AD701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC8517B-4002-4550-B2F8-EA881E4AD701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC8517B-4002-4550-B2F8-EA881E4AD701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC8517B-4002-4550-B2F8-EA881E4AD701}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9ED1BD8A-6E3D-4F46-8CBF-8471CC8ECB55}
+	EndGlobalSection
+EndGlobal
