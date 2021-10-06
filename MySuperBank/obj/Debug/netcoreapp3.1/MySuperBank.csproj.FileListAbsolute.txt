@@ -12,3 +12,6 @@ C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\obj\Debug\netcoreapp3.1\MyS
 C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\obj\Debug\netcoreapp3.1\MySuperBank.dll
 C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\obj\Debug\netcoreapp3.1\MySuperBank.pdb
 C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\obj\Debug\netcoreapp3.1\MySuperBank.genruntimeconfig.cache
+C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\bin\Debug\netcoreapp3.1\ClassLibrary1.dll
+C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\bin\Debug\netcoreapp3.1\ClassLibrary1.pdb
+C:\Users\yangPC\source\repos\MySuperBank\MySuperBank\obj\Debug\netcoreapp3.1\MySuperBank.csproj.CopyComplete

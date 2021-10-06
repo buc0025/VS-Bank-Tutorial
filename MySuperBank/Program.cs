@@ -48,46 +48,48 @@ namespace MySuperBank
 
 
             /*
-             * https://leetcode.com/problems/goat-latin/
+             * https://edabit.com/challenge/ToMXLjWDLQqFua7Wh
              * 
              */
-            string sentence = "I speak Goat Latin";
-            string[] arr = sentence.Split(" ");
-            var stringbuilder = new StringBuilder();
-            HashSet<char> set = new HashSet<char>();
+            string phrase = "What went wrong??????????";
+            //int exclaim = 0;
+            //int question = 0;
+            bool exclaim = false;
+            bool question = false;
+            int index = 0;
 
-            string vowels = "AEIOUaeiou";
-
-            for (int i = 0; i < vowels.Length; i++)
+            for (int i = phrase.Length - 1; i >= 0; i--)
             {
-                set.Add(vowels[i]);
-            }
-
-            int count = 1;
-
-            foreach (var item in arr)
-            {
-                if (set.Contains(item[0]))
+                if (phrase[i] == '!')
                 {
-                    stringbuilder.Append(item);
+                    //exclaim++;
+                    exclaim = true;
+                } else if (phrase[i] == '?')
+                {
+                    //question++;
+                    question = true;
                 } else
                 {
-                    stringbuilder.Append(item.Substring(1));
-                    stringbuilder.Append(item[0]);
+                    index = i;
+                    break;
                 }
-
-                stringbuilder.Append("ma");
-
-                for (int i = 0; i < count; i++)
-                {
-                    stringbuilder.Append("a");
-                }
-
-                count++;
-                stringbuilder.Append(" ");
             }
-            string result = stringbuilder.ToString().Substring(0, stringbuilder.Length - 1);
-            Console.WriteLine(result);
+
+            var sentence = new StringBuilder(phrase.Substring(0, index + 1));
+
+            if (exclaim)
+            {
+                sentence.Append('!');
+            } else if (question)
+            {
+                sentence.Append('?');
+            }
+
+            Console.WriteLine(exclaim);
+            Console.WriteLine(question);
+            Console.WriteLine(sentence);
+
+            
         }
     }
 }
