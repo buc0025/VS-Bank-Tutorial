@@ -44,52 +44,36 @@ namespace MySuperBank
             //    Console.WriteLine(e.ToString());
             //}
 
+            int[] arr = { 5, 5, 10, 10, 15, 15, 20, 20 };
+
+            Console.WriteLine(Interview(arr, 130));
 
 
 
-            /*
-             * https://edabit.com/challenge/ToMXLjWDLQqFua7Wh
-             * 
-             */
-            string phrase = "What went wrong??????????";
-            //int exclaim = 0;
-            //int question = 0;
-            bool exclaim = false;
-            bool question = false;
-            int index = 0;
 
-            for (int i = phrase.Length - 1; i >= 0; i--)
+
+
+        }
+
+        //https://edabit.com/challenge/dZeNE4BJhyNgA99Fq
+        public static string Interview(int[] arr, int tot)
+        {
+            if (arr.Length != 8 || tot > 120)
             {
-                if (phrase[i] == '!')
+                return "disqualified";
+            }
+
+            int[] pass = { 5, 5, 10, 10, 15, 15, 20, 20 };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > pass[i])
                 {
-                    //exclaim++;
-                    exclaim = true;
-                } else if (phrase[i] == '?')
-                {
-                    //question++;
-                    question = true;
-                } else
-                {
-                    index = i;
-                    break;
+                    return "disqualified";
                 }
             }
 
-            var sentence = new StringBuilder(phrase.Substring(0, index + 1));
-
-            if (exclaim)
-            {
-                sentence.Append('!');
-            } else if (question)
-            {
-                sentence.Append('?');
-            }
-
-            Console.WriteLine(exclaim);
-            Console.WriteLine(question);
-            Console.WriteLine(sentence);
-
-            
+            return "qualified";
         }
     }
 }
