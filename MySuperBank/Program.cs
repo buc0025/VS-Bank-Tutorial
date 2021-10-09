@@ -46,34 +46,42 @@ namespace MySuperBank
 
             int[] arr = { 5, 5, 10, 10, 15, 15, 20, 20 };
 
-            Console.WriteLine(Interview(arr, 130));
+            string str = "this is a string";
 
+            Console.WriteLine(str.Substring(5));
 
+            Console.WriteLine(Uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo"));
 
 
 
 
         }
 
-        //https://edabit.com/challenge/dZeNE4BJhyNgA99Fq
-        public static string Interview(int[] arr, int tot)
+        //https://edabit.com/challenge/wunaXvZw3WctYioeC
+        public static string Uncensor(string txt, string vowels)
         {
-            if (arr.Length != 8 || tot > 120)
+            if (vowels.Length == 0)
             {
-                return "disqualified";
+                return txt;
             }
 
-            int[] pass = { 5, 5, 10, 10, 15, 15, 20, 20 };
+            int index = 0;
+            var phrase = new StringBuilder();
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < txt.Length; i++)
             {
-                if (arr[i] > pass[i])
+                if (txt[i] == '*')
                 {
-                    return "disqualified";
+                    phrase.Append(vowels[index]);
+                    index++;
+                }
+                else
+                {
+                    phrase.Append(txt[i]);
                 }
             }
 
-            return "qualified";
+            return phrase.ToString();
         }
     }
 }
