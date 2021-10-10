@@ -46,42 +46,34 @@ namespace MySuperBank
 
             int[] arr = { 5, 5, 10, 10, 15, 15, 20, 20 };
 
-            string str = "this is a string";
+            string str = "Someone is outside the doorway";
 
-            Console.WriteLine(str.Substring(5));
+            string[] words = str.Split(" ");
 
-            Console.WriteLine(Uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo"));
+            Console.WriteLine(IsSmooth(str));
 
 
 
 
         }
 
-        //https://edabit.com/challenge/wunaXvZw3WctYioeC
-        public static string Uncensor(string txt, string vowels)
+        //https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc
+        public static bool IsSmooth(string sentence)
         {
-            if (vowels.Length == 0)
+            string[] words = sentence.Split(" ");
+            char end = words[0][words[0].Length - 1];
+
+            for (int i = 1; i < words.Length; i++)
             {
-                return txt;
+                if (end != words[i][0])
+                {
+                    return false;
+                }
+
+                end = words[i][words[i].Length - 1];
             }
 
-            int index = 0;
-            var phrase = new StringBuilder();
-
-            for (int i = 0; i < txt.Length; i++)
-            {
-                if (txt[i] == '*')
-                {
-                    phrase.Append(vowels[index]);
-                    index++;
-                }
-                else
-                {
-                    phrase.Append(txt[i]);
-                }
-            }
-
-            return phrase.ToString();
+            return true;
         }
     }
 }
